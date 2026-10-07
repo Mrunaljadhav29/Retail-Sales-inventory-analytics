@@ -1,110 +1,62 @@
 # Retail Sales & Inventory Performance Analytics
 
-## 1. Introduction
-
-This project looks at retail sales and inventory data to understand where revenue is coming from, where inventory pressure exists, and how different categories, stores, regions, promotions, and discounts perform.
-
-I used **Python, MySQL, and Power BI** to take the project from raw data to business insights and an interactive dashboard.
+A beginner-friendly data analytics project that uses **Python, MySQL and Power BI** to understand a retail business: where the money comes from, where stock may run short, and how promotions and discounts relate to sales.
 
 ![Power BI Dashboard](assets/dashboard.png)
 
----
+## 1. Introduction
+
+This project looks at retail sales and inventory data to answer simple business questions about categories, stores, regions, promotions and discounts. I took it from raw data to business insights and an interactive dashboard.
 
 ## 2. Business Problem
 
-A retail business needs a simple way to answer questions such as:
+A retail business needs a simple way to answer questions like:
 
-- Which categories and regions generate the most revenue?
+- Which categories and regions earn the most revenue?
 - Where is inventory under pressure?
 - Which stores and products perform better?
-- Does sales activity change by month or season?
-- How do promotion and discount levels relate to sales?
+- Do sales change by month or season?
+- How do promotions and discounts relate to sales?
 
-The main goal was to create **one consistent view of sales, demand, and inventory** that can help managers decide where to investigate further.
-
----
+The goal is one clear view of sales, demand and inventory, so managers know where to look closer.
 
 ## 3. Dataset
 
-This project uses the **Retail Store Inventory and Demand Forecasting** dataset from Kaggle.
+Source: **Retail Store Inventory and Demand Forecasting** dataset from Kaggle. It is a synthetically generated retail dataset, so the results show the method and are not real company results.
 
-**Dataset Source:**  
-[Retail Store Inventory and Demand Forecasting – Kaggle](https://www.kaggle.com/datasets/atomicd/retail-store-inventory-and-demand-forecasting)
+[Dataset on Kaggle](https://www.kaggle.com/datasets/atomicd/retail-store-inventory-and-demand-forecasting)
 
-The dataset is a **synthetically generated retail dataset** designed for inventory and demand analysis.
+| Item | Detail |
+|---|---|
+| Rows | 76,000 |
+| Columns | 16 original, 19 in the final project data |
+| Stores / Products | 5 stores, 20 product IDs |
+| Categories | Clothing, Electronics, Furniture, Groceries, Toys |
+| Regions / Seasons | 4 regions, 4 seasons |
+| Dates | 1 January 2022 to 30 January 2024 |
 
-### Dataset Overview
-
-- **76,000 rows**
-- **16 original columns**
-- **19 final project columns**
-- **5 stores**
-- **20 product IDs**
-- **5 categories**
-- **4 regions**
-- **4 seasons**
-- **Date range:** 1 January 2022 to 30 January 2024
-
-The final project data includes sales, inventory, demand, price, discount, promotion, and calculated performance measures.
-
----
+The currency is not given in the data. Dollar ($) signs are used only for display.
 
 ## 4. Tools Used
 
 | Tool | What I used it for |
 |---|---|
-| Python | Data cleaning, feature engineering and EDA |
-| Pandas | Data preparation and analysis |
-| Matplotlib | Exploratory visualizations |
-| MySQL | Business questions, analysis and validation |
-| Power BI | Interactive dashboard |
-| DAX | KPI calculations |
-
----
+| Python (Pandas, Matplotlib) | Cleaning data, creating new metrics, exploring the data |
+| MySQL | Answering business questions and checking the final KPIs |
+| Power BI and DAX | KPI calculations and the interactive dashboard |
 
 ## 5. What I Did
 
-I followed a simple end-to-end workflow:
+`Raw Data → Python → Cleaned CSV → MySQL → Power BI`
 
-**Raw Data → Python → Cleaned CSV → MySQL → Power BI**
+- **Python:** cleaned the data, checked duplicates and data types, created new metrics and saved the final CSV.
+- **SQL:** loaded the CSV into MySQL and answered questions about months, categories, products, stores, regions, inventory, promotions, discounts and seasons. I also used SQL to check the final KPIs.
+- **Power BI:** built KPI cards, filters (slicers) and charts in one dashboard page.
 
-### Python
-
-I cleaned the dataset, checked duplicates and data types, created new metrics, performed exploratory analysis, and exported the final cleaned dataset.
-
-### SQL
-
-I loaded the cleaned data into MySQL and used SQL to answer business questions around:
-
-- Monthly performance
-- Categories
-- Products
-- Stores
-- Regions
-- Inventory
-- Promotions
-- Discounts
-- Seasonality
-
-I also used SQL to validate the final project KPIs.
-
-### Power BI
-
-I converted the analysis into an interactive dashboard with KPI cards, slicers, and business charts.
-
----
-
-## 6. Key Metrics Created
+## 6. Metrics I Created
 
 ```text
-Revenue
-= Units Sold × Price
-
-Revenue per Unit
-= Revenue ÷ Units Sold
-
-Inventory Gap
-= Inventory Level − Units Sold
-
-Demand-to-Inventory Ratio
-= Demand ÷ Inventory Level
+Revenue                    = Units Sold × Price
+Revenue per Unit           = Revenue ÷ Units Sold
+Inventory Gap              = Inventory Level − Units Sold
+Demand-to-Inventory Ratio  = Demand ÷ Inventory Level
