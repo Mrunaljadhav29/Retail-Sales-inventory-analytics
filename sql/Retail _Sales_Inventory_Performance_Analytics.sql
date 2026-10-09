@@ -78,9 +78,7 @@ SET
     `Demand-to-Inventory Ratio` = NULLIF(TRIM(@csv_demand_to_inventory_ratio), '');
     
     
-    SHOW GLOBAL VARIABLES LIKE 'local_infile';
-    
-    SET GLOBAL local_infile = 1;
+
     
     
  -- =====================================================================
