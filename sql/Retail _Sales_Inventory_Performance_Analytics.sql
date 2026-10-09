@@ -37,7 +37,7 @@ CREATE TABLE cleaned_sales_data (
     `Year` SMALLINT NOT NULL,
     `Revenue per Unit` DECIMAL(10, 2) NULL,
     `Inventory Gap` INT NOT NULL,
-    `Demand-to-Inventory Ratio` DECIMAL(12, 8) NULL
+    `Demand-to-Inventory Ratio` DECIMAL(15, 9) NULL
 );
 
 -- Bulk-load the CSV. This path matches the folder path you shared.
