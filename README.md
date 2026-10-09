@@ -147,7 +147,7 @@ The notebook's saved verification output reports passing checks for the expected
 
 - [Prepared CSV](data/cleaned_sales_data.csv)
 - [Python analysis notebook](python/retail_sales_analysis.ipynb)
-- [MySQL analysis script](sql/Retail%20_Sales_Inventory_Performance_Analytics.sql)
+- [MySQL analysis script](sql/retail_sales_inventory_performance.sql)
 - [Power BI dashboard file](powerbi/Retail_Sales_Inventory.pbix)
 - [Dashboard screenshot](assets/dashboard.png)
 - [Python verification screenshot](assets/python_verification.png)
